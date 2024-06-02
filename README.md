@@ -35,50 +35,50 @@ STEP 2)
 ROWS=3
 COLS=3
 
-symbols and their count defined.
-created a get_slot_machine_spin fn .
-created all_symbols empty list
-went through symbols and their count dictionary and added them to all list
+Symbols and their count defined.
+Created a get_slot_machine_spin fn .
+Created all_symbols empty list.
+Went through symbols and their count dictionary and added them to all list
 
-then moving on to machine designing part
-empty columns list created
-used  for loop and it will add empty lists named column correcsponding to number of columns we have 
-designed in such a way that the elements which will be in first list inside the columns will contain elements in first column and so on
-then created current symbols which is a copy of all symbols . Done this so that the elemnts we add can be removed too
-then used for loop wrt reels and randomly addeded elemts to the column and then added the column to columns
+Then moving on to machine designing part.
+Empty columns list created.
+Used  for loop and it will add empty lists named column correcsponding to number of columns we have .
+Designed in such a way that the elements which will be in first list inside the columns will contain elements in first column and so on.
+Then created current symbols which is a copy of all symbols . Done this so that the elemnts we add can be removed too.
+Then used for loop wrt reels and randomly addeded elemts to the column and then added the column to columns.
 
-Now the get_slot_nachine_spin gives us columns list which will contain columns which has elemets of each column
+Now the get_slot_nachine_spin gives us columns list which will contain columns which has elemets of each column.
 [[] [] [] ]
-we get in above form with random elemsts inside
-need to take transpose . 
-Then will get the machine as machine
+We get in above form with random elemsts inside.
+Need to take transpose . 
+Then will get the machine as machine.
 
 For transpose we use print_slot_machines function
-then we used
-for row in range(len(columns[0])):
-range(len(coluns[0])) will give (0,3)
-for first iteration row =0
-then will use for loop and go inside columns and pick up index plus the value at index
-| shouldnt come at 3rd index 
-so used if and managed it
-after going through once in loop instead of starting next line used end'|'
+Then we used
+For row in range(len(columns[0])):
+Range(len(coluns[0])) will give (0,3)
+For first iteration row =0.
+Then will use for loop and go inside columns and pick up index plus the value at index.
+| shouldnt come at 3rd index.
+So used if and managed it.
+After going through once in loop instead of starting next line used end'|'.
 
-then created slots variable under main and put get_slot_machine_spin(ROWS ,COLS ,symbol_count)
-then called prin_slot_machine and gave slots as argument to transpose it
+Then created slots variable under main and put get_slot_machine_spin(ROWS ,COLS ,symbol_count).
+Then called prin_slot_machine and gave slots as argument to transpose it.
 
 
 Step 3)
 
 
-created symbol value dictionary
-#imagibe if user betted on one line which will be the top line as we are not giving the freedom to choose line
-Stored the symbol in the first column(0th index) in the line in symbol
-then checked using for loop in columns if remaining element matching
-if not equal then break
-if equal then multiplie symbol value with bet amount and give back winning amount and winning lines
+Created symbol value dictionary.
+Imagine if user betted on one line which will be the top line as we are not giving the freedom to choose line.
+Stored the symbol in the first column(0th index) in the line in symbol.
+Then checked using for loop in columns if remaining element matching.
+If not equal then break.
+If equal then multiplie symbol value with bet amount and give back winning amount and winning lines.
 
 Step 4)
-Cut and pasted all the repeating code into spin fn
-then in main added press to enter to play and q to quit . Used while and if Q pressed then will break out of loop if not will pass current balance to spin fn and then update the balance
+Cut and pasted all the repeating code into spin fn.
+then in main added press to enter to play and q to quit . Used while and if Q pressed then will break out of loop if not will pass current balance to spin fn and then update the balance.
 
 

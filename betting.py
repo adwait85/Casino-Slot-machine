@@ -2,7 +2,7 @@ import random
 
 
 MAX_LINES=3
-##convention to use caps lock for set variable
+
 MAX_BET= 1000
 MIN_BET=1
 ROWS=3
@@ -12,19 +12,19 @@ symbol_count ={ 'A':2 , 'B':4 , 'C': 6 , 'D':8}
 symbol_value ={ 'A':5 , 'B':4 , 'C': 3 , 'D':2}
 
 def check_winnings(columns,lines,bet,values):
-    #look only at the lines they bet on
+   
     winnings=0
     winning_lines=[]
     for line in range(lines):
-        #get the first symbol in the row and make sure it is same for rest . zero beacuse we have all the columns not the rows
+      
         symbol=columns[0][line]
-        #we have symbol now . need to loop through all columns
+       
         for column in columns:
             symbol_to_check =column[line]
-            #symbol to check i in current line
+           
             if symbol !=symbol_to_check:
                 break
-        #for else statement is there . if no break in for statement then the else statement executes
+      
         else:
             winnings+=values[symbol]*bet
             winning_lines.append(line+1)
@@ -38,7 +38,7 @@ def get_slot_machine_spin(reels , cols , symbols):
         for _ in range(values):
             all_symbols.append(keys)
             
-        #used underscore . meanes anonymos variable . we need to loop through something and we dont care about count count or iterations can use underscore.
+      
  
     columns =[]
     
@@ -140,9 +140,7 @@ def main():
             break
         balance+=spin(balance)
     print(f'You left with Rs{balance}')
-        #spin returns how much they won . tell details . will update balance based on that spin
-        #then will
-    
+        
     
     
     

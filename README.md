@@ -1,5 +1,5 @@
 # Casino-Slot-machine basic
-My first project created on Python with the help of the youtube channel TechWithTim
+My first project created on Python with the help of the youtube channel Tech With Tim
 THOUGHT PROCESSSSSSSSSSSSSSSSSSSSSSSSSS
 -----------------------------------------------------------------------------
 STEP1 . TAKE MONEY FROM USER AND ASK HOW MANY LINES HE/SHE WANTS TO BET ON AND THE AMOUNT HE WANTS TO BET ON EACH LINE
@@ -13,7 +13,7 @@ Step 1)
 First we created a function named deposit through wich user can deposit money . We used input to take money from the user .
 But we need to apply some conditions to make sure the amount is a valid number 
 Used while loop which will keep running till the user enters a valid amount
-If the input is not a digit then it will say to eneter valid numbers
+If the input is not a digit then it will say to enter valid number
 If the input is not greater than or equal to zero 
 If the input is a digit and greater than zero it will break out from the while loop
 Then used the same way to create a function to  get number of lines the user wants to bet on . 
@@ -28,7 +28,57 @@ then wrote print to see all the information till now like how much betted on how
 If we call the main function at this point it will wake up deposit function , get_number_of_lines and get_bet  and will print(balance , lines ,get_bet)
 
 
-STEP 2.
+STEP 2)
+
+
 3x3 machine target
 ROWS=3
 COLS=3
+
+symbols and their count defined
+created a get_slot_machine_spin fn 
+created all_symbols empty list
+went through symbols and their count dictionary and added them to all list
+
+then moving on to machine designing part
+empty columns list created
+used  for loop and it will add empty lists named column correcsponding to number of columns we have 
+designed in such a way that the elements which will be in first list inside the columns will contain elements in first column and so on
+then created current symbols which is a copy of all symbols . Done this so that the elemnts we add can be removed too
+then used for loop wrt reels and randomly addeded elemts to the column and then added the column to columns
+
+Now the get_slot_nachine_spin gives us columns list which will contain columns which has elemets of each column
+[[] [] [] ]
+we get in above form with random elemsts inside
+need to take transpose . 
+Then will get the machine as machine
+
+For transpose we use print_slot_machines function
+then we used
+for row in range(len(columns[0])):
+range(len(coluns[0])) will give (0,3)
+for first iteration row =0
+then will use for loop and go inside columns and pick up index plus the value at index
+| shouldnt come at 3rd index 
+so used if and managed it
+after going through once in loop instead of starting next line used end'|'
+
+then created slots variable under main and put get_slot_machine_spin(ROWS ,COLS ,symbol_count)
+then called prin_slot_machine and gave slots as argument to transpose it
+
+
+Step 3)
+
+
+created symbol value dictionary
+#imagibe if user betted on one line which will be the top line as we are not giving the freedom to choose line
+Stored the symbol in the first column(0th index) in the line in symbol
+then checked using for loop in columns if remaining element matching
+if not equal then break
+if equal then multiplie symbol value with bet amount and give back winning amount and winning lines
+
+Step 4)
+Cut and pasted all the repeating code into spin fn
+then in main added press to enter to play and q to quit . Used while and if Q pressed then will break out of loop if not will pass current balance to spin fn and then update the balance
+
+
